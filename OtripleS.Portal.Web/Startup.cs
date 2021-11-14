@@ -15,6 +15,7 @@ using OtripleS.Portal.Web.Brokers.DateTimes;
 using OtripleS.Portal.Web.Brokers.Logging;
 using OtripleS.Portal.Web.Brokers.Navigations;
 using OtripleS.Portal.Web.Models.Configurations;
+using OtripleS.Portal.Web.Services.Courses;
 using OtripleS.Portal.Web.Services.Students;
 using OtripleS.Portal.Web.Services.StudentViews;
 using OtripleS.Portal.Web.Services.Teachers;
@@ -50,6 +51,7 @@ namespace OtripleS.Portal.Web
             services.AddScoped<IStudentViewService, StudentViewService>();
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<ITeacherViewService, TeacherViewService>();
+            services.AddScoped<ICourseService, CourseService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
